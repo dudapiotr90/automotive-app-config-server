@@ -5,6 +5,7 @@ spring:
     mongodb:
       port: 27017
       host: localhost
+      database: maintenance_db
 
 eureka:
   client:
