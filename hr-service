@@ -3,7 +3,7 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:2345/maintenance_db
+    url: jdbc:postgresql://localhost:2345/hr_db
     username: postgres
     password: postgres            
     type: com.zaxxer.hikari.HikariDataSource
