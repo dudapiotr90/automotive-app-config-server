@@ -1,1 +1,61 @@
+server:
+  port: 8080
 
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: client-service
+          uri: lb://client-service
+          predicates:
+            - Path=/client/**
+
+        - id: design-service
+          uri: lb://design-service
+          predicates:
+            - Path=/design/**
+
+        - id: email-service
+          uri: lb://email-service
+          predicates:
+            - Path=/email/**
+
+        - id: employee-service
+          uri: lb://employee-service
+          predicates:
+            - Path=/employee/**
+
+        - id: hr-service
+          uri: lb://hr-service
+          predicates:
+            - Path=/hr/**
+
+        - id: maintenance-service
+          uri: lb://maintenance-service
+          predicates:
+            - Path=/maintenance/**
+
+        - id: management-service
+          uri: lb://management-service
+          predicates:
+            - Path=/management/**
+
+        - id: payment-service
+          uri: lb://payment-service
+          predicates:
+            - Path=/payment/**
+
+        - id: production-service
+          uri: lb://production-service
+          predicates:
+            - Path=/production/**
+
+        - id: registration-service
+          uri: lb://registration-service
+          predicates:
+            - Path=/registration/**
+
+eureka:
+  client:
+    serverUrl:
+      defaultZone: http://localhost:8761/eureka/
