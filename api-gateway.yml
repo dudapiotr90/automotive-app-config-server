@@ -55,6 +55,11 @@ spring:
           predicates:
             - Path=/registration/**
 
+        - id: invoice-service
+          uri: lb://invoice-service
+          predicates:
+            - Path=/invoice/**
+
 eureka:
   client:
     serverUrl:
