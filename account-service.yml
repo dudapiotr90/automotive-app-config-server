@@ -1,0 +1,27 @@
+server:
+  port: 9055
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:2345/account_db
+    username: postgres
+    password: postgres            
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      idle-timeout: 10000
+      connectionTimeout: 10000
+      minimumIdle: 10
+      maximumPoolSize: 20
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true 
+
+eureka:
+  client:
+    serverUrl:
+      defaultZone: http://localhost:8761/eureka/
