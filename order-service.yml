@@ -26,12 +26,13 @@ eureka:
 
 rabbitmq:
   exchange:
-    account:
+    order:
       name: order_exchange
   queue:
-    email:
+    order:
       name: order_queue
   binding:
-    email:
-      routing:
-        key: customer_order_routing_key
+    order:
+      customer:
+        routing:
+          key: customer_order_routing_key
