@@ -1,2 +1,12 @@
 server:
   port: 9020
+
+rabbitmq:
+  queue:
+    account:
+      email:
+        name: account_email_queue
+  queue:
+    order:
+      email:
+        name: order_email_name
