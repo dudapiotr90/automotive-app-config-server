@@ -30,9 +30,15 @@ rabbitmq:
       name: order_exchange
   queue:
     order:
-      name: order_queue
+      email:
+        name: order_email_name
+      customer:
+        name: order_customer_queue
   binding:
     order:
+      email:
+        routing:
+          key: order_email_routing_key
       customer:
         routing:
-          key: customer_order_routing_key
+          key: order_customer_routing_key
