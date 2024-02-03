@@ -25,3 +25,22 @@ eureka:
   client:
     serverUrl:
       defaultZone: http://localhost:8761/eureka/
+
+rabbitmq:
+  exchange:
+    management:
+      name: management_exchange
+  queue:
+    management:
+      email:
+        name: management_email_name
+      invoice:
+        name: management_invoice_queue
+  binding:
+    management:
+      email:
+        routing:
+          key: management_email_routing_key
+      invoice:
+        routing:
+          key: management_invoice_routing_key
