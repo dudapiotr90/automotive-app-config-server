@@ -6,7 +6,9 @@ rabbitmq:
     account:
       email:
         name: account_email_queue
-  queue:
     order:
       email:
         name: order_email_name
+    management:
+      email:
+        name: management_email_name
