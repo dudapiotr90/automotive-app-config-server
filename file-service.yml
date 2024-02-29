@@ -3,3 +3,13 @@ server:
 
 host:
   apiKey: ${api_key}
+
+spring:
+  data:
+    mongodb:
+      auto-index-creation: 'true'
+      authentication-database: admin
+      database: files
+      port: '27017'
+      host: localhost
+
