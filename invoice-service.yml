@@ -35,11 +35,14 @@ rabbitmq:
         name: management_invoice_queue
     invoice:
       file:
-        name: invoice_file_queue
+        save: invoice_file_queue_save
+        update: invoice_file_queue_update
   binding:
     invoice:
       file:
         routing:
-          key: invoice_file_routing_key
+          key_save: invoice_file_routing_key
+        routing:
+          key_update: invoice_file_routing_key
 
 
